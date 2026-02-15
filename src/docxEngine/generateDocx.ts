@@ -4,12 +4,14 @@ import { Document } from "docx";
 import { getHeader } from "./header/getHeader";
 import { createEndDocument } from "./end/createEndDocument";
 import { createITSBlank } from "./ITSBlank/createITSBlank";
+import { createLKBlank } from "./LKBlank/createLKBlank";
 import { createTableDocument } from "./table/createTableDocument";
 import type { ProductRow } from "../types/ProductRowType";
 
 export async function generateDocx(positions: ProductRow[]) {
   const preview = await createPreviewDocument();
   const ITSBlank = await createITSBlank();
+  const LKBlank = await createLKBlank();
   const header = await getHeader();
   const end = await createEndDocument();
   const table = await createTableDocument(positions);
@@ -42,7 +44,7 @@ export async function generateDocx(positions: ProductRow[]) {
             }, */
           },
         },
-        children: [...preview, ...ITSBlank, ...table, ...end],
+        children: [...preview, ...ITSBlank, ...table, ...LKBlank, ...end],
       },
     ],
   });
@@ -52,7 +54,7 @@ export async function generateDocx(positions: ProductRow[]) {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = "MyDocument.docx";
+  a.download = "Коммерческое предложение.docx";
   a.click();
 
   URL.revokeObjectURL(url);

@@ -34,6 +34,13 @@ const preSet: ProductRow[] = [
   },
   { id: "OneC_UNF", name: "1С УНФ", count: 0, type: "PP" },
 
+  //Fresh_Start_12 Fresh_Opt_12 Fresh_RS_12 Fresh_UNF_12
+
+  { id: "Fresh_Start_12", name: "Фреш Старт", count: 0, type: "FRESH" },
+  { id: "Fresh_Opt_12", name: "Фреш Опт", count: 0, type: "FRESH" },
+  { id: "Fresh_RS_12", name: "Фреш Расширенный", count: 0, type: "FRESH" },
+  { id: "Fresh_UNF_12", name: "Фреш УНФ", count: 0, type: "FRESH" },
+
   // ITS (ИТС)
   { id: "ITS_ECO_12", name: "ИТС Эконом (12 мес.)", count: 0, type: "ITS" },
   {
@@ -119,13 +126,7 @@ const preSet: ProductRow[] = [
     type: "ITS",
   },
 
-  //Fresh_Start_12 Fresh_Opt_12 Fresh_RS_12 Fresh_UNF_12
-
   { id: "ITS_TECHNO", name: "ИТС Техно", count: 0, type: "ITS" },
-  { id: "Fresh_Start_12", name: "Фреш Старт", count: 0, type: "FRESH" },
-  { id: "Fresh_Opt_12", name: "Фреш Опт", count: 0, type: "FRESH" },
-  { id: "Fresh_RS_12", name: "Фреш Расширенный", count: 0, type: "FRESH" },
-  { id: "Fresh_UNF_12", name: "Фреш УНФ", count: 0, type: "FRESH" },
 
   //Thin_Client Data_Transfer Work_No_Price Work_Price
 

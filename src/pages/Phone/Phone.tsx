@@ -1,4 +1,4 @@
-import { ContentCopy, Launch } from "@mui/icons-material";
+import { ContentCopy, Launch, TextFields } from "@mui/icons-material";
 import { Box, Button, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -13,9 +13,10 @@ const formatPhone = (value: string) => {
   return "не верный формат";
 };
 
-const formatWhatsApp = (value: string) => {
+const formatWhatsApp = (value: string, text?: string) => {
   if (value === "не верный формат") return value;
   const phone = value.slice(2);
+  if (text) return `https://wa.me/+7${phone}?text=${text}`;
   return `https://wa.me/+7${phone}`;
 };
 
@@ -24,6 +25,10 @@ export const Phone = () => {
 
   const mobile = formatPhone(phone);
   const whatsApp = formatWhatsApp(mobile);
+  const whatsAppText = formatWhatsApp(
+    mobile,
+    "Здравствуйте, меня зовут Алдияр, пишу вам от компании Первый БИТ. Мы с вами ранее созванивались по вопросу приобретения 1С.",
+  );
 
   const copyButton = (value: string) => {
     if (value === "не верный формат") return;
@@ -65,6 +70,9 @@ export const Phone = () => {
           </Button>
           <Button variant="contained" onClick={() => openLink(whatsApp)}>
             <Launch />
+          </Button>
+          <Button variant="contained" onClick={() => openLink(whatsAppText)}>
+            <TextFields />
           </Button>
         </Box>
       </Box>
