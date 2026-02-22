@@ -2,6 +2,7 @@ import { Paragraph, TableCell, TableRow, TextRun, WidthType } from "docx";
 import type { ProductRow } from "../../types/ProductRowType";
 import { getPositionImage } from "../getPositionImage";
 import { positionsData } from "../dataSet/positionsData";
+import { getPriceLabel, getSumLabel } from "../../utils/getNumericLabel";
 
 export const getTableContent = async (positions: ProductRow[]) => {
   const createPositionImage = async (file: string) => {
@@ -48,13 +49,7 @@ export const getTableContent = async (positions: ProductRow[]) => {
                 new Paragraph({
                   alignment: "center",
                   children: [
-                    new TextRun(
-                      positionsData[row.id].price === 0.1
-                        ? "Оценка"
-                        : Intl.NumberFormat("ru-RU").format(
-                            positionsData[row.id].price,
-                          ),
-                    ),
+                    new TextRun(getPriceLabel(positionsData[row.id].price)),
                   ],
                 }),
               ],
@@ -67,11 +62,7 @@ export const getTableContent = async (positions: ProductRow[]) => {
                   alignment: "center",
                   children: [
                     new TextRun(
-                      positionsData[row.id].price === 0.1
-                        ? "Оценка"
-                        : new Intl.NumberFormat("ru-RU").format(
-                            positionsData[row.id].price * row.count,
-                          ),
+                      getSumLabel(positionsData[row.id].price, row.count),
                     ),
                   ],
                 }),

@@ -4,5 +4,6 @@ export type ProductRow = {
   id: keyof typeof positionsData;
   name: string;
   count: number;
-  type: "PP" | "ITS" | "FRESH" | "WORK";
+  type: "PP" | "ITS" | "FRESH" | "WORK" | "ADDON";
+  price: number;
 };

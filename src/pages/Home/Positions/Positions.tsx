@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { Count } from "./ui/Count";
 import type { ProductRow } from "../../../types/ProductRowType";
+import { getPriceLabel } from "../../../utils/getNumericLabel";
 interface IProducts {
   positions: ProductRow[];
   setPositions: React.Dispatch<React.SetStateAction<ProductRow[]>>;
@@ -24,7 +25,8 @@ const getBgColor = (type: string) => {
       return "#c0c6f5";
     case "WORK":
       return "#bafcf4";
-
+    case "ADDON":
+      return "#d9f5b1";
     default:
       return "#ffffff";
   }
@@ -37,6 +39,7 @@ export const Positions: FC<IProducts> = ({ positions, setPositions }) => {
           <TableHead>
             <TableRow>
               <TableCell>наименование</TableCell>
+              <TableCell>цена</TableCell>
               <TableCell>кол-во</TableCell>
             </TableRow>
           </TableHead>
@@ -48,6 +51,7 @@ export const Positions: FC<IProducts> = ({ positions, setPositions }) => {
                 sx={{ backgroundColor: getBgColor(row.type) }}
               >
                 <TableCell>{row.name}</TableCell>
+                <TableCell>{getPriceLabel(row.price)}</TableCell>
                 <TableCell>
                   <Count
                     count={row.count}

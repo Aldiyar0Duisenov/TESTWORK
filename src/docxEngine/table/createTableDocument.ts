@@ -130,7 +130,7 @@ export const createTableDocument = async (positions: ProductRow[]) => {
                             return (
                               accumulator +
                               currentValue.count *
-                                positionsData[currentValue.id].price
+                                Math.floor(positionsData[currentValue.id].price)
                             );
                           }, 0),
                       ),
