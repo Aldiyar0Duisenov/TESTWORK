@@ -1,4 +1,5 @@
 import { AddonsData } from "./AddonsData";
+import { DeviceData } from "./DeviceData";
 import { FreshData } from "./FreshData";
 import { ITSData } from "./ITSData";
 import { OneCData } from "./OneCData";
@@ -10,4 +11,5 @@ export const positionsData = {
   ...FreshData,
   ...WorkData,
   ...AddonsData,
+  ...DeviceData,
 };

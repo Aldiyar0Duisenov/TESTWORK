@@ -1,0 +1,150 @@
+import type { ProductRow } from "../../../types/ProductRowType";
+
+export const itsProducts: ProductRow[] = [
+  // ITS (ИТС)
+  {
+    id: "ITS_ECO_12",
+    name: "ИТС Эконом (12 мес.)",
+    count: 0,
+    type: "ITS",
+    price: 130000,
+  },
+  {
+    id: "ITS_ECO_12_CONT",
+    name: "ИТС Эконом (12 мес., непрерывное)",
+    count: 0,
+    type: "ITS",
+    price: 110000,
+  },
+  {
+    id: "ITS_ECO_6",
+    name: "ИТС Эконом (6 мес.)",
+    count: 0,
+    type: "ITS",
+    price: 69000,
+  },
+  {
+    id: "ITS_ECO_6_CONT",
+    name: "ИТС Эконом (6 мес., непрерывное)",
+    count: 0,
+    type: "ITS",
+    price: 60000,
+  },
+  {
+    id: "ITS_ECO_12_ACT",
+    name: "ИТС Эконом (12 мес., акция 8+4)",
+    count: 0,
+    type: "ITS",
+    price: 71000,
+  },
+
+  {
+    id: "ITS_PROF_12",
+    name: "ИТС Проф (12 мес.)",
+    count: 0,
+    type: "ITS",
+    price: 190000,
+  },
+  {
+    id: "ITS_PROF_12_CONT",
+    name: "ИТС Проф (12 мес., непрерывное)",
+    count: 0,
+    type: "ITS",
+    price: 160000,
+  },
+  {
+    id: "ITS_PROF_6",
+    name: "ИТС Проф (6 мес.)",
+    count: 0,
+    type: "ITS",
+    price: 101000,
+  },
+  {
+    id: "ITS_PROF_6_CONT",
+    name: "ИТС Проф (6 мес., непрерывное)",
+    count: 0,
+    type: "ITS",
+    price: 101000,
+  },
+  {
+    id: "ITS_PROF_12_ACT",
+    name: "ИТС Проф (12 мес., акция 8+4)",
+    count: 0,
+    type: "ITS",
+    price: 104000,
+  },
+
+  {
+    id: "ITS_BUS_12",
+    name: "ИТС Бизнес (12 мес.)",
+    count: 0,
+    type: "ITS",
+    price: 286000,
+  },
+  {
+    id: "ITS_BUS_12_CONT",
+    name: "ИТС Бизнес (12 мес., непрерывное)",
+    count: 0,
+    type: "ITS",
+    price: 256000,
+  },
+  {
+    id: "ITS_BUS_6",
+    name: "ИТС Бизнес (6 мес.)",
+    count: 0,
+    type: "ITS",
+    price: 149000,
+  },
+  {
+    id: "ITS_BUS_6_CONT",
+    name: "ИТС Бизнес (6 мес., непрерывное)",
+    count: 0,
+    type: "ITS",
+    price: 149000,
+  },
+  {
+    id: "ITS_BUS_12_ACT",
+    name: "ИТС Бизнес (12 мес., акция 8+4)",
+    count: 0,
+    type: "ITS",
+    price: 200000,
+  },
+
+  {
+    id: "ITS_PREM_12",
+    name: "ИТС Премиум (12 мес.)",
+    count: 0,
+    type: "ITS",
+    price: 625000,
+  },
+  {
+    id: "ITS_PREM_12_CONT",
+    name: "ИТС Премиум (12 мес., непрерывное)",
+    count: 0,
+    type: "ITS",
+    price: 595000,
+  },
+  {
+    id: "ITS_PREM_6",
+    name: "ИТС Премиум (6 мес.)",
+    count: 0,
+    type: "ITS",
+    price: 368000,
+  },
+  {
+    id: "ITS_PREM_6_CONT",
+    name: "ИТС Премиум (6 мес., непрерывное)",
+    count: 0,
+    type: "ITS",
+    price: 368000,
+  },
+  {
+    id: "ITS_PREM_12_ACT",
+    name: "ИТС Премиум (12 мес., акция 8+4)",
+    count: 0,
+    type: "ITS",
+    price: 539000,
+  },
+
+  { id: "ITS_TECHNO", name: "ИТС Техно", count: 0, type: "ITS", price: 64000 },
+];
