@@ -29,6 +29,10 @@ export const Phone = () => {
     mobile,
     "Здравствуйте, меня зовут Алдияр, пишу вам от компании Первый БИТ. Мы с вами ранее созванивались по вопросу приобретения 1С.",
   );
+  const youNeedHelpText = formatWhatsApp(
+    mobile,
+    "Здравствуйте, меня зовут Алдияр, пишу вам от компании Первый БИТ. Вы оставляли заявку на нашем сайте по вопросу 1С. Подскажите запрос еще актуален?",
+  );
 
   const copyButton = (value: string) => {
     if (value === "не верный формат") return;
@@ -72,6 +76,9 @@ export const Phone = () => {
             <Launch />
           </Button>
           <Button variant="contained" onClick={() => openLink(whatsAppText)}>
+            <TextFields />
+          </Button>
+          <Button variant="contained" onClick={() => openLink(youNeedHelpText)}>
             <TextFields />
           </Button>
         </Box>
